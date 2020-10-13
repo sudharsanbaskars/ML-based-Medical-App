@@ -3,3 +3,4 @@ pandas==1.1.2
 scikit-learn==0.23.2
 numpy==1.18.1
 awesome-streamlit==20200728.1
+pickle==4.0
