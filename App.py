@@ -4,10 +4,8 @@ import source.app_liver
 import source.app_diabetes
 import source.app_home
 import source.app_about
-import awesome_streamlit as ast
 
 
-ast.core.services.other.set_logging_format()
 
 pages = {
          "Home":source.app_home,
