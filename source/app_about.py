@@ -10,7 +10,7 @@ def main():
 
     # 1.Diabetes:
     """)
-    st.image('images\diabetes.jpg')
+    st.image("images/diabetes.jpg")
     st.write("""
     Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high.
     Blood glucose is your main source of energy and comes from the food you eat.
@@ -29,7 +29,7 @@ def main():
     
     # 2.Heart Disease:
     """)
-    st.image("images\heart.jpg")
+    st.image("images/heart.jpg")
     st.write("""
     ## Overview:
     Heart disease describes a range of conditions that affect your heart.
@@ -47,7 +47,7 @@ def main():
     
     # 3.Liver Disease:
     """)
-    st.image("images\liver.jpg")
+    st.image("images/liver.jpg")
     st.write("""
      Liver disease is any disturbance of liver function that causes illness. The liver is responsible for many critical functions within the body and should it become diseased or injured, the loss of those functions can cause significant damage to the body.
      Liver disease is also referred to as hepatic disease.
