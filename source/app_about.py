@@ -10,7 +10,8 @@ def main():
 
     # 1.Diabetes:
     """)
-    st.image("source\images\diabetes.jpg")
+    image = "images/diabetes.jpg"
+    st.image(image)
     st.write("""
     Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high.
     Blood glucose is your main source of energy and comes from the food you eat.
