@@ -10,7 +10,9 @@ def main():
 
     # 1.Diabetes:
     """)
-    st.image("./images/diabetes.jpg")
+    st.markdown("""
+    [<img src="https://github.com/sudharsanbaskars/ML-based-Medical-App/source/images/diabetes.png?raw=true" style="max-width: 700px">]"""
+    #st.image("./images/diabetes.jpg")
     st.write("""
     Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high.
     Blood glucose is your main source of energy and comes from the food you eat.
