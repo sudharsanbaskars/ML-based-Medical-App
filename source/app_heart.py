@@ -18,6 +18,31 @@ X_Data = scaler.fit_transform(X_Data)
 
 def heart_disease_prediction(age,sex,cp,
                         trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal):
+    # for sex
+    if sex=="Male":
+        sex=1
+    else:
+        sex=0
+    #for fbs
+    if fbs=="True":
+        fbs=1
+    else:
+        fbs=0
+    #for exang
+    if exang=="Yes":
+        exang=1
+    else:
+        exang=0
+    #for thal
+    if thal=="Normal":
+        thal=1
+    elif thal=="Fixed defect":
+        thal=2
+    elif thal=="Reversable defect":
+        thal=3
+    else:
+        thal=0
+
     x = np.array([age, sex, cp, trestbps, chol, fbs, restecg,thalach, exang,oldpeak,slope,ca,thal])
 
     x = scaler.transform([x])
@@ -36,20 +61,18 @@ def main():
     """
     st.markdown(html_temp, unsafe_allow_html=True)
     age = st.number_input("Age")
-    sex = st.number_input("Sex((1 = male; 0 = female))")
-    cp = st.number_input("Chest Pain Type")
-    trestbps = st.number_input("Trestbps")
+    sex = st.selectbox("Sex",("Male","Female"))
+    cp = st.selectbox("Chest Pain Type",(0,1,2,3))
+    trestbps = st.number_input("Trestbps(resting blood pressure (in mm Hg on admission to the hospital))")
     chol = st.number_input("Serum cholestoral in mg/dl")
-    fbs = st.number_input("Fasting blood sugar level(FBS)(1 = true; 0 = false)")
-    restecg = st.number_input("Restecg")
+    fbs = st.selectbox("fasting blood sugar &gt; 120 mg/dl",("True", "False"))
+    restecg = st.number_input("Restecg(resting electrocardiographic results)")
     thalach = st.number_input("Thalach(maximum heart rate achieved)")
-    exang = st.number_input("Exercise Induced Angina (1 = yes; 0 = no)")
+    exang = st.selectbox("Exercise Induced Angina", ("Yes", "No"))
     oldpeak = st.number_input("Oldpeak(ST depression induced by exercise relative to rest)")
-    slope = st.number_input("Slope")
+    slope = st.number_input("Slope(slope of the peak exercise ST segment)")
     ca = st.number_input("Number of major vessels (0-3) colored by flourosopy")
-    thal = st.number_input("Thal(0 = normal; 1 = fixed defect; 2 = reversable defect)")
-    #result = ""
-    #output_mapper = {0:"Not Diabetic", 1:"You are Diabetic"}
+    thal = st.selectbox("Thal",("Normal","Fixed defect","Reversable defect","Nothing"))
 
     if st.button("Predict"):
         result = heart_disease_prediction(age,sex,cp,
