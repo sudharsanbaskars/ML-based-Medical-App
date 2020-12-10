@@ -26,9 +26,6 @@ def main():
     st.sidebar.title("Creators")
     st.sidebar.write("""
     - **B.Sudharsan**
-    - **K.Gowri Shankar**
-    - **S.Sriaakash**
-    - **M.Hariharan**
             """)
 
 
