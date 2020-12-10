@@ -31,10 +31,6 @@ def main():
     
     # Creator :
     - **B.Sudharsan**
-    - **K.Gowri Shankar**
-    - **S.Sriaakash**
-    - **M.Hariharan**
-    
     """)
 
 if __name__ == "__main__":
